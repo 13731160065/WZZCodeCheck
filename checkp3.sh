@@ -1,4 +1,5 @@
 #!/bin/bash
+cp "$1" ./
 rm -rf Assets.json
 unzip ./*.ipa > /dev/null
 mv ./Payload/DuoDuoFu.app/Assets.car ./
