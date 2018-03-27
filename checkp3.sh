@@ -1,4 +1,10 @@
 #!/bin/bash
+if [ -e "$1" ]; then
+	echo
+else
+	echo "未找到该文件，你是不是忘了把文件包传给我？"
+	exit 0
+fi
 cp "$1" ./
 rm -rf Assets.json
 unzip ./*.ipa > /dev/null
