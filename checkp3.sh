@@ -1,10 +1,14 @@
 #!/bin/bash
+
 if [ -e "$1" ]; then
 	echo
 else
-	echo "未找到该文件，你是不是忘了把文件包传给我？"
-	exit 0
+    echo -e "\033[32mversion 1.0.0\033[0m"
+    echo "使用方法:将需要检测的ipa包放在该文件后面"
+    echo "例如:./checkP3 xxx.ipa"
+    exit 0
 fi
+
 rm -rf ./tmpabcipa
 rm -rf ./Assets.json
 mkdir ./tmpabcipa
