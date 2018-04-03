@@ -5,7 +5,7 @@ if [ -e "$1" ]; then
 else
     echo -e "\033[32mversion 1.0.0\033[0m"
     echo "使用方法:将需要检测的ipa包放在该文件后面"
-    echo "例如:./checkP3 xxx.ipa"
+    echo "例如:./checkP3-wzz xxx.ipa"
     exit 0
 fi
 
