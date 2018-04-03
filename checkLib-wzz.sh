@@ -1,6 +1,15 @@
 #!/bin/bash
 
-arr=`find . -name "*.a"`
+if [ -e "$1" ]; then
+	echo
+else
+    echo -e "\033[32mversion 1.0.0\033[0m"
+    echo "使用方法:将需要检测的路径放在该文件后面"
+    echo "例如:./checkLib-wzz.sh xxx"
+    exit 0
+fi
+
+arr=`find $1 -name "*.a"`
 
 for aaa in $arr; do
 	echo $aaa;
